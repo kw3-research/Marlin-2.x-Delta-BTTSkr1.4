@@ -17,6 +17,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * edited by Kw3 Research (06-2020), definition of endstop for delta printer based with 3 max endstop and 1 Z min 
  *
  */
 #pragma once
@@ -69,8 +71,8 @@
     #define Y_MIN_PIN      P1_25   // E1DET
   #endif
 #else
-  #define Y_MAX_PIN         P1_25
-  #define Y_MIN_PIN         P1_28
+  #define Y_MAX_PIN         P1_28 //inverted with Y_MIN_PIN , was P1_25
+  #define Y_MIN_PIN         P1_25 //inverted with Y_MIN_PIN , was P1_28
 #endif
 
 #if Z_STALL_SENSITIVITY
@@ -81,8 +83,8 @@
     #define Z_MIN_PIN      P1_24   // PWRDET
   #endif
 #else
-  #define Z_MAX_PIN         P1_00
-  #define Z_MIN_PIN         P1_27
+  #define Z_MAX_PIN         P1_27 //inverted with Z_MIN_PIN , was P1_00
+  #define Z_MIN_PIN         P0_10 //inverted with Z_MIN_PIN , was P1_27
 #endif
 
 
