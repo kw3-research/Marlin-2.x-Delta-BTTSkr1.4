@@ -2953,6 +2953,7 @@
                                                             // axis after which the printer will abort. Comment out to
                                                             // disable abort behavior.
 
+
   #define I2CPE_TIME_TRUSTED        10000                   // After an encoder fault, there must be no further fault
                                                             // for this amount of time (in ms) before the encoder
                                                             // is trusted again.
