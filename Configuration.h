@@ -1436,7 +1436,7 @@
 #define Z_ENABLE_ON 0
 #define E_ENABLE_ON 0 // For all extruders
 
-// Disables axis stepper immediately when it's not being used.
+// Disables axis stepper immediately when it's not being used. true → disable motor; false →keep the motor on
 // WARNING: When motors turn off there is a chance of losing position accuracy!
 #define DISABLE_X false
 #define DISABLE_Y false
@@ -1455,19 +1455,19 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #if ENABLED(DROP_IN_TRINAMIC)
   #if ENABLED(TRINAMIC_ON_X)
-    #define INVERT_X_DIR false
+    #define INVERT_X_DIR true // was false, modified for G2s
   #else
-    #define INVERT_X_DIR true
+    #define INVERT_X_DIR false
   #endif
   #if ENABLED(TRINAMIC_ON_Y)
-    #define INVERT_Y_DIR false
+    #define INVERT_Y_DIR true // was false, modified for G2s
   #else
     #define INVERT_Y_DIR true
   #endif
   #if ENABLED(TRINAMIC_ON_Z)
-    #define INVERT_Z_DIR false
+    #define INVERT_Z_DIR true // was false, modified for G2s
   #else
-    #define INVERT_Z_DIR true
+    #define INVERT_Z_DIR false
   #endif
   #else
     #define INVERT_X_DIR true
